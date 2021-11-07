@@ -143,9 +143,11 @@ Error message and password prompt
 
 <li>$:/_jt/css-width100</li>
 
+<li>$:/_jt/edit-field-sketch</li>
+
 <li>$:/_jt/fotl-macros</li>
 
-<li>$:/_jt/recap-edit</li>
+<li>$:/_jt/view-field-sketch</li>
 
 <li>$:/_sq/Stories/config/openLinkDivert</li>
 
@@ -371,6 +373,8 @@ Error message and password prompt
 
 <li>$:/state/tabs/controlpanel/toolbars-1345989671</li>
 
+<li>$:/state/tag-manager/adventure</li>
+
 <li>$:/state/tree/$:/.giffmex/</li>
 
 <li>$:/status/IsAnonymous</li>
@@ -413,19 +417,15 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>$:/themes/tiddlywiki/vanilla/metrics/bodyfontsize</li>
+
+<li>$:/themes/tiddlywiki/vanilla/metrics/fontsize</li>
+
 <li>$:/themes/tiddlywiki/vanilla/metrics/storyleft</li>
 
 <li>$:/themes/tiddlywiki/vanilla/metrics/storytop</li>
 
 <li>$:/view</li>
-
-<li>1.1) The Adventure of the Missing Library Book</li>
-
-<li>1.2) The Adventure of Aila's Mere</li>
-
-<li>2.1) The Adventure of Droskar's Curse</li>
-
-<li>2.2) There Was No Clean Like Mister Clean</li>
 
 <li>Abadar</li>
 
@@ -443,7 +443,19 @@ Error message and password prompt
 
 <li>Calomeh</li>
 
+<li>Campaign Inspirations</li>
+
 <li>Cascades of Usol</li>
+
+<li>Ch. 1.1 - The Adventure of the Missing Library Book</li>
+
+<li>Ch. 1.2 - The Shunned Valley Tragedy</li>
+
+<li>Ch. 2.1 - The Adventure of Droskar's Curse</li>
+
+<li>Ch. 2.2 - No Clean Like Mister Clean</li>
+
+<li>chapter</li>
 
 <li>Connections to Hell</li>
 
@@ -503,8 +515,6 @@ Error message and password prompt
 
 <li>Imanol Andoni</li>
 
-<li>Inspirations &amp; References</li>
-
 <li>Interlopers</li>
 
 <li>Iztal Mehea</li>
@@ -554,6 +564,8 @@ Error message and password prompt
 <li>Orcs of the Bear's Hide</li>
 
 <li>Orcs of the Shattered Shield</li>
+
+<li>Pathfinder References</li>
 
 <li>Pothnettle Mytanalanafor</li>
 
@@ -680,6 +692,13 @@ Error message and password prompt
 <div created="20211105212221113" modified="20211105212457697" tags="$:/tags/Stylesheet" title="$:/_jt/css-width100">
 <pre>.width100 { width:100%; }</pre>
 </div>
+<div created="20211105191100670" list-before="$:/core/ui/EditTemplate/body" modified="20211105223152535" tags="$:/tags/EditTemplate" title="$:/_jt/edit-field-sketch">
+<pre>&lt;$list filter=&quot;[all[current]has:field[sketch]]&quot;&gt;
+&lt;$edit-text field=&quot;sketch&quot; tag=&quot;textarea&quot; minHeight=&quot;1em&quot; autoHeight=&quot;yes&quot; class=width100 default=&quot;&quot; placeholder=&quot;enter a description for this tiddler&quot; /&gt;
+&lt;/$list&gt;
+
+</pre>
+</div>
 <div created="20211104013400973" modified="20211105211337913" tags="$:/tags/Macro" title="$:/_jt/fotl-macros">
 <pre>\define list-tagged-w-sketch()
 &lt;ul&gt;&lt;$list filter=&quot;[all[current]tagging[]]&quot;&gt;
@@ -689,11 +708,10 @@ Error message and password prompt
 \end
 </pre>
 </div>
-<div created="20211105191100670" modified="20211105212517675" sketch="ugh yo" tags="$:/tags/EditTemplate" title="$:/_jt/recap-edit">
-<pre>&lt;$list filter=&quot;[all[current]tag[recap]]&quot;&gt;
-&lt;$edit-text field=&quot;sketch&quot; tag=&quot;textarea&quot; minHeight=&quot;1em&quot; autoHeight=&quot;yes&quot; class=width100 default=&quot;&quot; placeholder=&quot;enter a description for this tiddler&quot; /&gt;
+<div created="20211105222157650" list-before="$:/core/ui/ViewTemplate/body" modified="20211105223056416" tags="$:/tags/ViewTemplate" title="$:/_jt/view-field-sketch">
+<pre>&lt;$list filter=&quot;[all[current]has:field[sketch]]&quot;&gt;
+{{!!sketch}}
 &lt;/$list&gt;
-
 </pre>
 </div>
 <div bag="default" created="20170629173808777" modified="20200504143324443" revision="0" title="$:/_sq/Stories/config/openLinkDivert" type="text/vnd.tiddlywiki">
@@ -12339,8 +12357,8 @@ exports.context = contextWidget;
 <div created="20200418122550429" modified="20210101022954236" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Filter</pre>
 </div>
-<div created="20200418132348763" modified="20201230230554544" title="$:/state/tab--1963855381">
-<pre>$:/plugins/sq/Stories/settings</pre>
+<div created="20200418132348763" modified="20211105230510951" title="$:/state/tab--1963855381">
+<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
 </div>
 <div created="20200429214724797" modified="20200429214724797" title="$:/state/tab--219645345">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Themes</pre>
@@ -12372,14 +12390,17 @@ exports.context = contextWidget;
 <div created="20210202060219883" modified="20210202060223111" title="$:/state/tab-1800482881">
 <pre>$:/core/ui/TiddlerInfo/Fields</pre>
 </div>
-<div created="20200418122101344" modified="20211105203824826" title="$:/state/tab/moresidebar-1850697562">
-<pre>$:/core/ui/MoreSideBar/System</pre>
+<div created="20200418122101344" modified="20211107021547974" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
 <div created="20200418121835270" modified="20211105200720835" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div created="20200504200956301" modified="20200504201043124" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
+</div>
+<div created="20211106205903536" modified="20211106205905422" title="$:/state/tag-manager/adventure">
+<pre>closed</pre>
 </div>
 <div created="20200504154623789" modified="20200504154625935" title="$:/state/tree/$:/.giffmex/">
 <pre>hide</pre>
@@ -12399,7 +12420,7 @@ exports.context = contextWidget;
 <div bag="default" revision="1" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20211105200127022" list="$:/_jt/css-width100 $:/_jt/fotl-macros $:/_jt/recap-edit [[Session 2020-11-21 (#11): Sun Valley Import-Export]] [[Friends of the Library Campaign]]" modified="20211105211402833" title="$:/StoryList">
+<div created="20211105200127022" list="Mike [[Friends of the Library]]" modified="20211107031617578" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200519141000553" list="$:/.giffmex/Buttons/more-tiddler-edit-actions $:/core/ui/Buttons/delete $:/core/ui/Buttons/cancel $:/core/ui/Buttons/save" modified="20200521145647980" tags="$:/giffmex/bigeditarea $:/giffmex/stroll" title="$:/tags/EditToolbar">
@@ -12475,7 +12496,7 @@ exports.context = contextWidget;
     }
 }</pre>
 </div>
-<div created="20200418122623650" modified="20211105212247297" title="$:/temp/NewTagName">
+<div created="20200418122623650" modified="20211107021556126" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div created="20200502174947648" modified="20200808142551586" title="$:/temp/RenameTags/replace">
@@ -12602,6 +12623,12 @@ exports.context = contextWidget;
     }
 }</pre>
 </div>
+<div created="20211105230814629" modified="20211105230817018" title="$:/themes/tiddlywiki/vanilla/metrics/bodyfontsize">
+<pre>14px</pre>
+</div>
+<div created="20211105230601921" modified="20211105230810000" title="$:/themes/tiddlywiki/vanilla/metrics/fontsize">
+<pre>14px</pre>
+</div>
 <div bag="default" created="20200414145431457" modified="20200414145437927" revision="0" title="$:/themes/tiddlywiki/vanilla/metrics/storyleft" type="text/vnd.tiddlywiki">
 <pre>0px</pre>
 </div>
@@ -12610,19 +12637,6 @@ exports.context = contextWidget;
 </div>
 <div bag="default" created="20200127165334843" modified="20200808142340054" revision="0" tags="$:/giffmex/stroll" title="$:/view" type="text/vnd.tiddlywiki">
 <pre>classic</pre>
-</div>
-<div created="20211102025636351" modified="20211104010242055" tags="adventure" title="1.1) The Adventure of the Missing Library Book">
-<pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;</pre>
-</div>
-<div created="20211102025753430" modified="20211104010646967" tags="adventure" title="1.2) The Adventure of Aila's Mere">
-<pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;</pre>
-</div>
-<div created="20211102025824494" modified="20211105004300934" tags="adventure" title="2.1) The Adventure of Droskar's Curse">
-<pre>&lt;&lt;list-tagged-w-sketch&gt;&gt;</pre>
-</div>
-<div created="20211102030047167" modified="20211105004304101" tags="adventure" title="2.2) There Was No Clean Like Mister Clean">
-<pre>&lt;&lt;list-tagged-w-sketch&gt;&gt;
-</pre>
 </div>
 <div created="20210116204124584" modified="20210116204608142" title="Abadar">
 <pre>a god of law, order, and wealth, popular among the [[imperial|Soholtin Empire]] ruling class</pre>
@@ -12653,7 +12667,36 @@ exports.context = contextWidget;
 <div created="20210115043024280" modified="20210115043024280" title="Calomeh">
 <pre></pre>
 </div>
+<div created="20210206060849676" modified="20211107030240245" tags="meta" title="Campaign Inspirations">
+<pre>* [[Andres|https://www.patreon.com/mutantdonkey/posts]]'s [[Three Kingdoms Campaign|https://notes-of-chance.blogspot.com]]
+* [[Gods, Demigods, and Heroes|https://en.wikipedia.org/wiki/Gods,_Demi-Gods_%26_Heroes]]: Oddly, what really got me into D&amp;D as a kid, along with illusionists, and venom spitting swords. If things take a weird Finnish or Celtic turn, this is why...
+* [[A Canticle for Leibowitz|https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz]]: A post-apocalyptic story set in a monastery and library. I read it first for a high-school Theology class and it became one of my favorite books. There's no connection to the campaign beyond the story inspiring the Library theme. No doubt you will avert many apocalypses before we're done - hopefully even all of them! (This [[Goodreads snippet|https://www.goodreads.com/book/show/164154.A_Canticle_for_Leibowitz]] is as good as any: &quot;the story spans centuries of ignorance, violence, and barbarism, viewing through a sharp, satirical eye the relentless progression of a human race damned by its inherent humanness to recelebrate its grand foibles and repeat its grievous mistakes&quot;.)
+
+Other fun stuff:
+
+* [[The Order of the Stick|https://www.giantitp.com/comics/oots.html]]: A truly great D&amp;D themed webcomic - I wish I could tell a story like this
+* [[GM Word of the Week|https://www.gmwordoftheweek.com]]: &quot;a good Game Master needs a lot of big, fancy words at their disposal to make their flavor text as confusing as possible&quot;
+
+And of course primary and existential thanks as expressed by https://www.giantitp.com/comics/oots0536.html
+</pre>
+</div>
 <div created="20210225054242825" modified="20210225054242825" title="Cascades of Usol">
+<pre></pre>
+</div>
+<div created="20211102025636351" modified="20211107011919619" tags="chapter" title="Ch. 1.1 - The Adventure of the Missing Library Book">
+<pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;</pre>
+</div>
+<div created="20211102025753430" modified="20211107011901319" tags="chapter" title="Ch. 1.2 - The Shunned Valley Tragedy">
+<pre>&lt;&lt;list-links &quot;[all[current]tagging[]]&quot;&gt;&gt;</pre>
+</div>
+<div created="20211102025824494" modified="20211107011847849" tags="chapter" title="Ch. 2.1 - The Adventure of Droskar's Curse">
+<pre>&lt;&lt;list-tagged-w-sketch&gt;&gt;</pre>
+</div>
+<div created="20211102030047167" modified="20211107011835449" sketch="The [[Friends of the Library]] disrupted [[The Needles]]'s shipment of human &quot;cargo&quot; downriver to [[Utushamash]] and rescued [[Asher Stannard]] in the process. But that attracted a harsh reaction from an image-conscious [[Sun Valley Import Export]]. They sent [[The Cleaner]] to cover things up. He wiped out many of The Needle's local [[minions|Cult of Norgorber]] and almost killed your whole party before you finally bit off his face and took his stuff." tags="chapter" title="Ch. 2.2 - No Clean Like Mister Clean">
+<pre>&lt;&lt;list-tagged-w-sketch&gt;&gt;
+</pre>
+</div>
+<div created="20211106210708983" list="[[Ch. 2.2 - No Clean Like Mister Clean]] [[Ch. 2.1 - The Adventure of Droskar's Curse]] [[Ch. 1.2 - The Shunned Valley Tragedy]] [[Ch. 1.1 - The Adventure of the Missing Library Book]]" modified="20211107011919624" title="chapter">
 <pre></pre>
 </div>
 <div created="20210101173812399" modified="20211105011809179" title="Connections to Hell">
@@ -12713,8 +12756,8 @@ You have learned that these generally require special ingredients - such as a sa
 <div created="20210115042254499" modified="20210115042254499" title="Falcon’s Hollow">
 <pre></pre>
 </div>
-<div created="20201230210211238" modified="20210101233306514" tags="pc" title="Flinty">
-<pre>* Furious dwarf barbarian</pre>
+<div created="20201230210211238" modified="20211107031004893" sketch="Furious dwarf barbarian and lover of children's picture books" tags="pc" title="Flinty">
+<pre></pre>
 </div>
 <div created="20210115042254500" modified="20210116215614239" title="Foam River Lumber Consortium">
 <pre></pre>
@@ -12722,24 +12765,25 @@ You have learned that these generally require special ingredients - such as a sa
 <div created="20210101174118308" modified="20210101174118308" title="Forgotten Cistern">
 <pre></pre>
 </div>
-<div created="20201230211033514" modified="20210112045411160" title="Friends of the Library">
+<div created="20201230211033514" modified="20211107031543580" title="Friends of the Library">
 <pre>You are the Friends of the [[Library at Three Suns Rock]]. Those few who frequent the library enough recognize you as a respectable and dedicated - if eccentric - bunch. You do your part to raise funds and organize volunteers for its upkeep, but you might also be found gathered in one of the reading galleries loudly debating local politics, or weeding the herb garden on the terrace overlooking the river, or helping to unstop its notoriously unreliable and ancient drains.
 
 Lately you have been making a bit of a heroic name for yourselves...
 
-&lt;&lt;list-links filter:&quot;[tag[pc]!tag[inactive]]&quot;&gt;&gt;</pre>
+&lt;ul&gt;&lt;$list filter=&quot;[tag[pc]!tag[inactive]]&quot;&gt;
+&lt;li&gt;&lt;$link&gt;{{!!title}}&lt;/$link&gt;: {{!!sketch}}&lt;/li&gt;
+&lt;/$list&gt;
+&lt;/ul&gt;
+</pre>
 </div>
-<div created="20201230205249628" modified="20210911225811857" tags="" title="Friends of the Library Campaign">
-<pre>You are the [[Friends|Friends of the Library]] of the [[Library at Three Suns Rock]]! 
+<div created="20201230205249628" modified="20211107025718294" tags="" title="Friends of the Library Campaign">
+<pre>You are the [[Friends|Friends of the Library]] of the [[Library at Three Suns Rock]]! Here are some [[references|Pathfinder References]] for the Pathfinder RPG, and here are some [[inspirations|Campaign Inspirations]].
 
-Recent session recaps:
-&lt;&lt;list-links filter:&quot;[tag[recap]]&quot;&gt;&gt;
-
-Where you are now: 
+Where you are on right now...
 
 * Fresh off slaughtering some [[svirfneblin|Deep Gnomes of Usol]] slave traders / drug sellers and stealing their load of soul drugs
 * Committed to bringing the same soul drugs back to the [[monks|Egunsentian Order of the Dancing Redeemer]] at [[Three Suns Rock]] in order to save the lives of the minions you captured/rescued from [[Sun Valley Import Export]]
-* But also still on the hook to deliver [[Hatchet]]'s regular old drug shipment to [[Little Andy]] in [[Riverdale]]. Awkward!
+* But also still on the hook to fetch and deliver the treacherous [[Hatchet]]'s regular old drug shipment to [[Little Andy]] in [[Riverdale]]. Awkward!
 * And curious about who the [[orc|Orcs of the Bear's Hide]]-employing mapmaker dude who attacked Hatchet is...
 
 Other stuff going on or unresolved...in addition to anything you might be thinking of (let me know what you're interested in!)...
@@ -12750,11 +12794,23 @@ Other stuff going on or unresolved...in addition to anything you might be thinki
 * In addition to the Sun Valley minions you're trying to wean off the soul drugs, the priests at the temple are still hosting the &quot;Cargo&quot; you captured/rescued. They must soon let go those who want to leave, and they have told [[Asher Stannard]] he can't stay forever even though he has recanted his wrongdoing and begged forgiveness.
 * [[Valley/|Valley of Three Suns]][[imperial|Soholtin Empire]] politics are always swirling...your friends and patrons are worried that the [[imperial delegate|Serdar Meran]] might crack down given the recent violence
 * [[Jonathan]] has an outstanding offer/request to go tomb-raiding with/for him in the ruins of ancient [[Eguzki]]...
+* Oh yeah, and don't forget...
+** Use some the crap you've found, or sell it, or something!
+** [[Santo]]'s [[family|House of Breccia]] crest above the door at the [[Old Bridge Stream Mill]]
 
-Oh yeah, and don't forget...
+Recent sessions:
+&lt;ul&gt;&lt;$list filter=&quot;[tag[Chapter TBD]sort[title]]&quot;&gt;
+&lt;li&gt;&lt;$link&gt;{{!!title}}&lt;/$link&gt;: {{!!sketch}}&lt;/li&gt;
+&lt;/$list&gt;
+&lt;/ul&gt;
 
-* Use some the crap you've found, or sell it, or something!
-* [[Santo]]'s [[family|House of Breccia]] crest above the door at the [[Old Bridge Stream Mill]]</pre>
+Previous chapters (most recent first):
+&lt;ul&gt;&lt;$list filter=&quot;[tag[chapter]]&quot;&gt;
+&lt;li&gt;&lt;$link&gt;{{!!title}}&lt;/$link&gt;: {{!!sketch}}&lt;/li&gt;
+&lt;/$list&gt;
+&lt;/ul&gt;
+
+</pre>
 </div>
 <div created="20210115042254500" modified="20210913031331084" tags="npc" title="Gavel Kreed">
 <pre></pre>
@@ -12779,7 +12835,7 @@ Before you start storing important information in Stroll, it is vital to make su
 See the [[control panel|$:/ControlPanel]] for more options.
 </pre>
 </div>
-<div created="20201230210211242" modified="20211025235743113" tags="npc ally" title="Gillian">
+<div created="20201230210211242" modified="20211105222138184" sketch="Elven assistant librarian and your main intermediary at the [[Library at Three Suns Rock]]" tags="npc ally" title="Gillian">
 <pre>* Elven assistant librarian 
 * Your main intermediary at the [[Library at Three Suns Rock]]</pre>
 </div>
@@ -12814,28 +12870,6 @@ See the [[control panel|$:/ControlPanel]] for more options.
 * like [[Santo]], hails from a noble house of the old [[Kingdom of the Sun]]
 * worships [[Sarenrae]] but keeps a low profile - not illegal but a bit awkward for a government official</pre>
 </div>
-<div created="20210206060849676" modified="20210413055111808" tags="" title="Inspirations &amp; References">
-<pre>Pathfinder Resources:
-
-* Rules: [[Archives of Nethys|https://2e.aonprd.com/Default.aspx]]
-* Rules more convenient for mobile: [[Pathfinder Easytool|http://www.pf2.easytool.es]]
-
-Inspirations:
-
-* Andres's [[Three Kingdoms Campaign|https://notes-of-chance.blogspot.com]]
-* [[A Canticle for Leibowitz|https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz]]: A post-apocalyptic story set in a monastery and library. I read it first for a high-school Theology class and it became one of my favorite books. There's no connection to the campaign beyond the story inspiring the Library theme. No doubt you will avert many apocalypses before we're done - hopefully even all of them!
-** This [[Goodreads snippet|https://www.goodreads.com/book/show/164154.A_Canticle_for_Leibowitz]] is as good as any: &quot;the story spans centuries of ignorance, violence, and barbarism, viewing through a sharp, satirical eye the relentless progression of a human race damned by its inherent humanness to recelebrate its grand foibles and repeat its grievous mistakes&quot;
-** A favorite and representative quote: “To survive the Church’s slow sifting of the arts, you have to have a surface that can please a righteous simpleton; and yet you need a depth beneath that surface to please a discerning sage. The sifting is slow, but it gets a turn of the sifter-handle now and then — when some new prelate inspects his episcopal chambers and mutters, “Some of this garbage has got to go.” The sifter was usually full of dulcet pap. When the old pap was ground out, fresh pap was added. But what was not ground out was gold, and it lasted. If a church endured five centuries of priestly bad taste, occasional good taste had, by then, usually stripped away most of the transient tripe, had made it a place of majesty that overawed the would-be prettifiers.”
-* [[Gods, Demigods, and Heroes|https://en.wikipedia.org/wiki/Gods,_Demi-Gods_%26_Heroes]]: Oddly, what really got me into D&amp;D as a kid, along with illusionists, and venom spitting swords. If things take a weird Finnish or Celtic turn, this is why...
-
-Other fun stuff:
-
-* [[The Order of the Stick|https://www.giantitp.com/comics/oots.html]]: A truly great D&amp;D themed webcomic - I wish I could tell a story like this
-* [[GM Word of the Week|https://www.gmwordoftheweek.com]]: &quot;a good Game Master needs a lot of big, fancy words at their disposal to make their flavor text as confusing as possible&quot;
-
-And of course primary thanks to https://www.giantitp.com/comics/oots0536.html
-</pre>
-</div>
 <div created="20210112040847500" modified="20210112040847500" title="Interlopers">
 <pre></pre>
 </div>
@@ -12862,7 +12896,7 @@ And of course primary thanks to https://www.giantitp.com/comics/oots0536.html
 <div created="20211025235614850" modified="20211025235614850" title="Lamashtu">
 <pre></pre>
 </div>
-<div created="20201231042552492" modified="20210112045309014" tags="pc inactive" title="Lariantes Algoth">
+<div created="20201231042552492" modified="20211107031522316" tags="inactive pc" title="Lariantes Algoth">
 <pre>Elf fighter</pre>
 </div>
 <div created="20210115042254498" modified="20210913031432076" tags="npc" title="Laurel">
@@ -12871,10 +12905,16 @@ And of course primary thanks to https://www.giantitp.com/comics/oots0536.html
 <div created="20210113053437955" modified="20210113053437955" title="League of the Just Hand">
 <pre></pre>
 </div>
-<div created="20201230210211241" modified="20210520033308034" title="Library at Three Suns Rock">
+<div created="20201230210211241" modified="20211107030213565" title="Library at Three Suns Rock">
 <pre>The Library itself is mostly taken for granted by the current residents of the [[Valley of Three Suns]]. It’s an unusual amenity to be found in a such a relative backwater. It is very old, and huge - much larger than what you might expect to serve the local population, especially in an age where literacy is uncommon and true scholarship is rare. But it’s only mostly taken for granted, not entirely. A larger than average contingent of artists, naturalists, artisans, and so on makes their home in the Valley, at least as compared to the [[Empire|Soholtin Empire]] of which it is but a tiny, out-of-the-way corner.
 
-The Library is just part of the ancient temple and monastery complex at [[Three Suns Rock]]</pre>
+The Library is just part of the ancient temple and monastery complex at [[Three Suns Rock]].
+
+To imagine what the library might be like, consider the library version of:
+
+&lt;&lt;&lt;
+To survive the Church’s slow sifting of the arts, you have to have a surface that can please a righteous simpleton; and yet you need a depth beneath that surface to please a discerning sage. The sifting is slow, but it gets a turn of the sifter-handle now and then — when some new prelate inspects his episcopal chambers and mutters, “Some of this garbage has got to go.” The sifter was usually full of dulcet pap. When the old pap was ground out, fresh pap was added. But what was not ground out was gold, and it lasted. If a church endured five centuries of priestly bad taste, occasional good taste had, by then, usually stripped away most of the transient tripe, had made it a place of majesty that overawed the would-be prettifiers.
+&lt;&lt;&lt; [[A Canticle for Leibowitz|https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz]]</pre>
 </div>
 <div created="20210131011913210" modified="20210131011913210" title="Little Andy">
 <pre></pre>
@@ -12888,8 +12928,8 @@ The Library is just part of the ancient temple and monastery complex at [[Three 
 <div created="20201231043353667" modified="20210913031538076" tags="deceased" title="Melvin">
 <pre></pre>
 </div>
-<div created="20201230210211243" modified="20201231045105235" tags="pc" title="Mike">
-<pre>Human cleric of Torag</pre>
+<div created="20201230210211243" modified="20211107031632506" sketch="Human cleric of [[Torag]] with a mad bedside manner" tags="pc" title="Mike">
+<pre></pre>
 </div>
 <div created="20210115042254500" modified="20210115042254500" title="Milon Roddam">
 <pre></pre>
@@ -12904,7 +12944,7 @@ The Library is just part of the ancient temple and monastery complex at [[Three 
 * Can probably help source harder to find or more advanced items
 </pre>
 </div>
-<div created="20201231043353670" modified="20201231052332092" tags="pc inactive" title="Nari Nutgall">
+<div created="20201231043353670" modified="20211107031533245" tags="inactive pc" title="Nari Nutgall">
 <pre></pre>
 </div>
 <div created="20201230211033515" modified="20210115022157800" title="Negu">
@@ -12932,6 +12972,14 @@ The Library is just part of the ancient temple and monastery complex at [[Three 
 <pre>* Distinguished by their shields, made of pieces of the shields of their defeated enemies
 * You defeated a large contingent of ineffective warriors who were hired by [[The Needle]] to attack [[Ashford Village]] and capture a member of the Stannard family
 * You found found ancient artifacts related to them in the hobgoblin tomb in the [[Shunned Valley]]</pre>
+</div>
+<div created="20211107021610391" modified="20211107024052646" tags="meta" title="Pathfinder References">
+<pre>* Rules: [[Archives of Nethys|https://2e.aonprd.com/Default.aspx]] maintained by [[Blake Davis|https://www.patreon.com/nethys/posts]]
+** [[Playing the game|https://2e.aonprd.com/Rules.aspx?ID=311]]
+** [[Basic actions|https://2e.aonprd.com/Actions.aspx]]
+* Rules more convenient for mobile: [[Pathfinder Easytool|http://www.pf2.easytool.es]] by [[Ivan Blanco Catalan|https://www.patreon.com/pathfinder2/posts]]
+
+</pre>
 </div>
 <div created="20201230210211241" modified="20210913031445243" tags="npc" title="Pothnettle Mytanalanafor">
 <pre></pre>
@@ -12970,9 +13018,8 @@ Currently held by [[Mike]]
 * Supposed to be an expert in ancient demonic languages, among other things...he might be able to translate the [[Norgorberite Ledger and Codex]] you took from [[The Needle]]
 * Last heard from, he was at &quot;[[Mistfall]]&quot;, deep in the wilderness far upriver along the [[Uda]]</pre>
 </div>
-<div created="20201230211033516" modified="20210117022840062" tags="pc" title="Santo">
-<pre>* Human paladin of [[Sarenrae]]
-* Heir to the [[House of Breccia]]</pre>
+<div created="20201230211033516" modified="20211107031135668" sketch="Human paladin of [[Sarenrae]] and heir to the [[House of Breccia]]" tags="pc" title="Santo">
+<pre></pre>
 </div>
 <div created="20210116220012034" modified="20210314043108596" title="Sarenrae">
 <pre>* Sun Goddess, patron of peacemakers and quiet strength
@@ -12984,7 +13031,7 @@ Currently held by [[Mike]]
 <div created="20210110061914965" modified="20210117024522248" tags="npc" title="Serdar Meran">
 <pre>*  [[Riverdale]]-based delegate of the Valley governor in [[St. Bryla]]</pre>
 </div>
-<div created="20210320065135283" modified="20211102030620598" tags="[[1.1) The Adventure of the Missing Library Book]]" title="Session 2018-10-23 (#1): The Forgotten Cistern">
+<div created="20210320065135283" modified="20211107011919621" tags="[[Ch. 1.1 - The Adventure of the Missing Library Book]]" title="Session 2018-10-23 (#1): The Forgotten Cistern">
 <pre>The Friends of the Library prevented what would certainly been a gruesome murder, or worse! And uncovered more than one mystery in the process...
 
 Gillian (the assistant librarian) summoned the party to the Low Garden, where they found gardeners and workers trying to fight off giant ants!
@@ -13026,7 +13073,7 @@ Upon returning to the garden...
 * Gillian was most intrigued by the rare books the heroes found. They came from the Library’s History section and have been overdue for 200 years! (Volumes include histories of the Valley, the royalty of ancient Eguzki, and the Rock itself.) She gave 100 gp [1r gold] as a reward for their return.
 * She also saw that the cups and utensils are part of a previous Abbot’s monogrammed silver service - Marco the Brewer, still known after over 100 years more for his excellent beer than for his piety. She offered 50 gp [1e gold] for them since she thinks they will make an excellent surprise gift for the current Abbot, who is an amateur brewer himself.</pre>
 </div>
-<div created="20210320070309441" modified="20211102030641772" tags="[[1.1) The Adventure of the Missing Library Book]]" title="Session 2018-11-28 (#2): Ashford Manor">
+<div created="20210320070309441" modified="20211107011919622" tags="[[Ch. 1.1 - The Adventure of the Missing Library Book]]" title="Session 2018-11-28 (#2): Ashford Manor">
 <pre>The Friends split the treasure from the previous adventure [all 1e gold!]:
 
 * 150 gp (100 for the books you found and 50 for the old silver placesetting), three ways between Mike, Squeeky, and Flinty (Santo was out of the room!)
@@ -13070,7 +13117,7 @@ Meanwhile, the party found the local priest, Waldere Elvery. Though drunk and de
 So, you're fresh off a battle, with a captive orc, a teenaged and somewhat star-struck villager who thinks you're really cool, and a drunk priest in tow...what happens next?
 </pre>
 </div>
-<div created="20210320071059372" modified="20211102030649508" tags="[[1.1) The Adventure of the Missing Library Book]]" title="Session 2018-12-20 (#3): The Battle(s) in Ashford Lane">
+<div created="20210320071059372" modified="20211107011919623" tags="[[Ch. 1.1 - The Adventure of the Missing Library Book]]" title="Session 2018-12-20 (#3): The Battle(s) in Ashford Lane">
 <pre>I never found time to make up detailed notes of the last session, but here are some brief notes to refresh everyone's memory before we play today...please correct me if anything seems too wrong or if I missed anything important:
 
 * You left your captured orc Cherk with the drunk priest Waldere Elvery. You also left Saeith Alston, the village miller's daughter and the part-time caretaker of the Stannard Manor
@@ -13095,7 +13142,7 @@ What will you do next?
 
 Looking forward to today!</pre>
 </div>
-<div created="20210320071628609" modified="20211102030657596" tags="[[1.1) The Adventure of the Missing Library Book]]" title="Session 2019-03-08 (#4): Heroes Rout Orcs in Ashford Village">
+<div created="20210320071628609" modified="20211107011919623" tags="[[Ch. 1.1 - The Adventure of the Missing Library Book]]" title="Session 2019-03-08 (#4): Heroes Rout Orcs in Ashford Village">
 <pre>O.K., 8+ months later here is a brief recap and epilogue, from the very sparse notes I took and my terrible aged memory.
 
 I'll send a separate email with some changes that come from switching versions to Pathfinder 2. (The money is different, so is experience, some items don't exist any more, etc.)
@@ -13123,7 +13170,7 @@ And some epilogue (to close this part of the story out):
 
 Looking forward to playing again! More to come about the change to v2...</pre>
 </div>
-<div created="20210320071935934" modified="20211102031002006" tags="[[1.2) The Adventure of Aila's Mere]]" title="Session 2019-11-22 (#5): One Axe Blow from a TPK">
+<div created="20210320071935934" modified="20211107011901321" tags="[[Ch. 1.2 - The Shunned Valley Tragedy]]" title="Session 2019-11-22 (#5): One Axe Blow from a TPK">
 <pre>I can't believe it's already been 4 weeks! And your latest adventure is very much still in progress...
 
 * Dust has settled since you saved Ashford Village, to great acclaim. Although life goes on as normal in the settled part of the Valley, the Sheriff has confided to Nari [Ulrich] his fears that this will not be the last you see of the Orcs of the Shattered Shield.
@@ -13147,7 +13194,7 @@ Looking forward to playing again! More to come about the change to v2...</pre>
 
 So, you're very beaten and bloodied, but victorious over the ancient queen's guardian, and in possession of her corpse. Dusk is settling outside...what will you do next?</pre>
 </div>
-<div created="20210320072436044" modified="20211102031002007" tags="[[1.2) The Adventure of Aila's Mere]]" title="Session 2019-12-20 (#6): Lorazain was Lunch">
+<div created="20210320072436044" modified="20211107011901321" tags="[[Ch. 1.2 - The Shunned Valley Tragedy]]" title="Session 2019-12-20 (#6): Lorazain was Lunch">
 <pre>It's been 9 months and my notes were more spare than usual, so if anyone remembers things differently please let me know:
 
 * After the near-death experience with the statue, the party healed up and rested for the night in the ancient hobgoblin tomb
@@ -13162,7 +13209,7 @@ So, you're very beaten and bloodied, but victorious over the ancient queen's gua
 
 Reminder note and Pathfinder links to follow...</pre>
 </div>
-<div created="20210320072714896" modified="20211102031002007" tags="[[1.2) The Adventure of Aila's Mere]]" title="Session 2020-09-12 (#7): Making New Friends">
+<div created="20210320072714896" modified="20211107011901321" tags="[[Ch. 1.2 - The Shunned Valley Tragedy]]" title="Session 2020-09-12 (#7): Making New Friends">
 <pre>So we finally had a chance to play again, and I think the virtual thing worked pretty well! Here is my recap below. Since it's time to move to Level 2, I'll send out links and details in a separate note, as well as a treasure recap. I'm hoping to play again on Saturday the 26th if that still works for y'all:
 
 * Santo was able to dislodge the stone blocking the still-unexplored cave, but only enough for the party to squeeze through
@@ -13181,7 +13228,7 @@ Reminder note and Pathfinder links to follow...</pre>
 * They are not assassins, and were fairly easily bought off by giving them the jaspers found earlier, plus some of the tapestries, and the potency crystal found in Ashford.
 * After seeing off the interlopers, you investigated the burial mounds near the mere...and finally found Aila! Years ago, most of her party had been killed by the owlbear, and she drowned in the mere while trying to hide. She asked you to find her bones and finally lay her to rest; now she and her cousin Lorazain are both buried by Aila's Mere.</pre>
 </div>
-<div created="20210115041423143" modified="20211105004325543" sketch="yo yo yo " tags="[[2.1) The Adventure of Droskar's Curse]]" title="Session 2020-10-03 (#8): Droskar's Curse">
+<div created="20210115041423143" modified="20211107011847850" sketch="yo yo yo " tags="[[Ch. 2.1 - The Adventure of Droskar's Curse]]" title="Session 2020-10-03 (#8): Droskar's Curse">
 <pre>After your safe return from the hobgoblin tombs and Aila’s Mere:
 
 * [[Lorazain]]’s [[father|Imanol Andoni]] sent you a nice letter in care of the [[Library|Library at Three Suns Rock]]. Although the family is not rich and couldn’t give you any reward, he is a minor official in the Viceroyalty that politically rules the [[Valley of Three Suns]] on behalf of the [[distant throne|Soholtin Empire]]. He has extended his friendship and an offer to help you to the extent he can should you ever find yourselves in need.
@@ -13205,7 +13252,7 @@ Some days later, our heroes found themselves, as usual, at the Library:
 So now the heroes have a pair of scared foxes eyeing them warily, as they can hear the gnoll who shot Squeeky fleeing upstream through the trees. It’s afternoon on your third day in the Darkmoon Vale. What will you do next?
 </pre>
 </div>
-<div created="20210115041302310" modified="20211102031034469" tags="[[2.1) The Adventure of Droskar's Curse]]" title="Session 2020-10-10 (#9): Gremlins and Gnolls">
+<div created="20210115041302310" modified="20211107011847851" tags="[[Ch. 2.1 - The Adventure of Droskar's Curse]]" title="Session 2020-10-10 (#9): Gremlins and Gnolls">
 <pre>* The gnoll who shot [[Squeeky]] made its escape through the trees
 * You identified the foxes as Firefoot Fennecs, which is odd because they aren’t native to the [[Valley|Valley of Three Suns]]. They normally live in more arid climates. The foxes, although wary, seemed attached to the party and followed you at a bit of a distance.
 * Making your way cautiously upstream, you came to a little gully formed by a stream that met up with the forest river. The only way across was a fallen log that bridged the gap. [[Mike]] and [[Flinty]] crossed easily, but Squeeky fell into the mud at the bottom!
@@ -13219,7 +13266,7 @@ So now the heroes have a pair of scared foxes eyeing them warily, as they can he
 It’s now evening and the party has had a narrow escape from death, but also seems to have prevented discovery. What will you do next?
 </pre>
 </div>
-<div created="20210115041009613" modified="20211102031046863" tags="[[2.1) The Adventure of Droskar's Curse]]" title="Session 2020-10-24 (#10): Spider Marionette!">
+<div created="20210115041009613" modified="20211107011847851" tags="[[Ch. 2.1 - The Adventure of Droskar's Curse]]" title="Session 2020-10-24 (#10): Spider Marionette!">
 <pre>* Continuing upstream after camping for the night, the party came upon a ruined compound. Scouting from the outside you could tell it was once an old monastery of Torag. By all signs, the monastery itself had long since been ransacked and plundered and picked clean.
 * However, in the courtyard were clear signs of fresh activity! You found three empty tents, one of which appeared to belong to the gnoll hunters you killed the previous day. Ominously, you also found a large empty cage.
 * Crumpled behind the disused well in the courtyard was a dead human, recently killed, with his face completely smashed in. By appearance you thought he might be from the logging [[Consortium|Foam River Lumber Consortium]] downstream. ([[Mike]] buried the body.)
@@ -13240,12 +13287,10 @@ It’s now evening and the party has had a narrow escape from death, but also se
 * [[Laurel]] and the residents of [[Falcon’s Hollow]], in contrast, were happy to greet you, and grateful that you have probably put an end to Droskar’s Curse. They sent you and Seju on to the Library with their blessings...
 </pre>
 </div>
-<div created="20210112040527253" modified="20211105213420860" sketch="A chance encounter while selling your [[hobgoblin loot|Hobgoblin snuff porn]] put you on the hunt for [[The Needle]] and led you into a battle with devils to rescue the &quot;cargo&quot; he was trying to send back to [[Utushamash]]" tags="recap [[2.2) There Was No Clean Like Mister Clean]]" title="Session 2020-11-21 (#11): Sun Valley Import-Export">
-<pre>{{!!sketch}}
-
-* High market day! The perfect time to sell off some of the loot picked up in previous adventures!
+<div created="20210112040527253" modified="20211107011835450" sketch="A chance encounter while selling your [[hobgoblin loot|Hobgoblin snuff porn]] put you on the hunt for [[The Needle]] and led you into a devilish battle to rescue the &quot;cargo&quot; of people he was trying to send back to [[Utushamash]]" tags="recap [[Ch. 2.2 - No Clean Like Mister Clean]]" title="Session 2020-11-21 (#11): Sun Valley Import-Export">
+<pre>* High market day! The perfect time to sell off some of the loot picked up in previous adventures!
 * While selling the, uh, [[exotic hobgoblin tapestries|Hobgoblin snuff porn]] from the [[Shunned Valley]], you got a bit of a surprise. The mercer told you he’d just paid “your boss” 20 gp for the matching set! He thought you were quite clever for doing your own side deal. [[Mike]] managed to get a description without it seeming too odd - a tall man, “thin as a needle”, with creepy eyes. The mercer didn’t think he was a local, which would mean he’d most likely be staying in one of the riverside inns that cater to market traffic.
-* You had another unexpected transaction at the nondescript storefront run by [[Willie]], by all accounts a fixture of the gem and jewel trade. When you showed him the burglar’s talisman, he quickly shuffled you into the back room and down some steps. “You’re not supposed to show that in the open! The clubhouse is down there.” Under one of the marketside boardwalks you found “The [[Justice League]]”, something of a moribund meeting place for charlatans-who-also-might-be-thieves. (Looking around more carefully, you saw signs  - plaques, paintings, some old bylaws - of an older, more dignified, and possibly more sinister organization apparently called the [[League of the Just Hand]].)
+* You had another unexpected transaction at the nondescript storefront run by [[Willie]], by all accounts a fixture of the gem and jewel trade. When you showed him the burglar’s talisman, he quickly shuffled you into the back room and down some steps. “You’re not supposed to show that in the open! The clubhouse is down there.” Under one of the marketside boardwalks you found the &quot;[[Justice League]]”, something of a moribund meeting place for charlatans-who-also-might-be-thieves. (Looking around more carefully, you saw signs  - plaques, paintings, some old bylaws - of an older, more dignified, and possibly more sinister organization apparently called the [[League of the Just Hand]].)
 * You were spotted by an acquaintance from the [[Library|Library at Three Suns Rock]] - [[Jonathan]] (“they call me ‘The Levitator’, you know, because I’m good at boosting stuff”), a halfling you’ve previously associated with as a sometime supplier(!) of materials for the monastic copyroom, but also as a sometime visitor to the History sections at the Library. He was excited to tell you of a line he had on an un-robbed tomb on the outskirts of ancient [[Eguzki]], something he wouldn’t trust the “hacks and clowns&quot; from the League with. But with your growing reputation for unearthing valuables from their stuffy old confines…
 * Jonathan sent you to the [[Silver Crown]] Inn and Tavern to meet [[Mallen]], the barkeep there, and his partner in shared archaeological pursuits. But you never had a chance to converse with Mallen about a job. Before you could get much information out of him, [[the man|The Needle]] the mercer described to you walked into the bar! He was indeed impossibly tall and thin, and you agreed that his stare was the definition of creepy. He immediately spied the party, waved his hand towards the crowded common room, and fled.
 * Horror erupted from the common room! An ordinary-seeming man began attacking the room! He seemed to take no notice of you as each blow of his easily killed one of his friends or neighbors. It took several rounds of unopposed blows to subdue him - more like you were beating on an ogre (and an ogre on regular people) than a man.
@@ -13258,7 +13303,7 @@ It’s now evening and the party has had a narrow escape from death, but also se
 So now the [[Friends of the Library]] have secured the “cargo” at Sun Valley Import Export. You’re surrounded by some twice-killed corpses, some blinking and aimless workers, some prisoners who may or may not be the worst of your neighbors demanding to be released, and of course a young man who claims to be Asher Stannard. What will you do next?
 </pre>
 </div>
-<div created="20201231042120470" modified="20211105171637432" sketch="You rescued [[Asher Stannard]] and the other &quot;cargo&quot;, and learned that [[Sun Valley Import Export]] had sent [[The Cleaner]] to, er, clean up the mess you had helped make for them " tags="recap [[2.2) There Was No Clean Like Mister Clean]]" title="Session 2020-11-28 (#12): Flies on the Wall">
+<div created="20201231042120470" modified="20211107011835451" sketch="You rescued [[Asher Stannard]] and the other &quot;cargo&quot;, and learned that [[Sun Valley Import Export]] had sent their [[&quot;Cleaner&quot;|The Cleaner]] to, er, clean up the mess you had helped make for them " tags="recap [[Ch. 2.2 - No Clean Like Mister Clean]]" title="Session 2020-11-28 (#12): Flies on the Wall">
 <pre>* [[Lariantes|Lariantes Algoth]] went to relieve [[Flinty]] at the bar scene, and she came to rejoin the party
 * Upon a quick search of the warehouse space you found: 2 [[moderate tanglefoot bags|https://2e.aonprd.com/Equipment.aspx?ID=78]], 2 poison doses (later identified as an uncommon [[lethargy poison|https://2e.aonprd.com/Equipment.aspx?ID=120]]), and 2 [[lesser smokesticks|https://2e.aonprd.com/Equipment.aspx?ID=135]], plus ordinary but bulky trade goods you estimated as being worth 20 gp if you took the time to find a buyer in the market
 * You also found documents indicating that a boat was arriving later that night to transport the “cargo” downriver
@@ -13296,7 +13341,7 @@ So now the [[Friends of the Library]] have secured the “cargo” at Sun Valley
 What will you do now? Evade the hunt? Go on the hunt yourselves? And what of the &quot;cargo&quot;?  
 </pre>
 </div>
-<div created="20201230222712038" modified="20211104011110808" tags="recap [[2.2) There Was No Clean Like Mister Clean]]" title="Session 2020-12-12 (#13): Hunters or Hunted?">
+<div created="20201230222712038" modified="20211107011835452" sketch="You tracked the underworld battle being waged as [[The Cleaner]] began to roll up [[The Needle]]'s people to cover up [[Sun Valley|Sun Valley Import Export]]'s involvement, while the [[Cult of Norgorber]] prepared to summon powerful help" tags="recap [[Ch. 2.2 - No Clean Like Mister Clean]]" title="Session 2020-12-12 (#13): Hunters or Hunted?">
 <pre>* The residents of [[Riverdale]] near the [[Sun Valley Import Export]] facility began swinging into action to fight the fire so that it wouldn’t spread
 * You went to investigate [[The Needle]]’s room but found it empty and unused. However, thinking to check neighboring rooms, [[Santo]] could tell that someone was next door even though they didn’t answer your knock.
 * [[Flinty]] kicked in the door and scared the crap out of two humans who had seemingly hurriedly donned matching robed garb (cultist chic)
@@ -13312,7 +13357,7 @@ What will you do now? Evade the hunt? Go on the hunt yourselves? And what of the
 * The fallen Norgorberites were the same couple you had captured the night before. You took their robes and prepared to follow their fellows to the most likely place they would be going - the abandoned grain mill upriver from Riverdale, closer to ancient [[Eguzki]] and the Rock…
 </pre>
 </div>
-<div created="20201230210556409" modified="20211104011056384" tags="recap [[2.2) There Was No Clean Like Mister Clean]]" title="Session 2020-12-19 (#14): Santo the Bedazzler!">
+<div created="20201230210556409" modified="20211107011835452" sketch="Following the [[Norgorberites|Cult of Norgorber]] to their lair at [[Old Bridge Stream Mill]], you crashed their demon-raising party. [[The Needle]] escaped, but you rescued the young gnome [[Pothnettle Mytanalanafor]] from a gruesome sacrificial fate." tags="recap [[Ch. 2.2 - No Clean Like Mister Clean]]" title="Session 2020-12-19 (#14): Santo the Bedazzler!">
 <pre>* As you made to follow the surviving [[Norgorber|Cult of Norgorber]] cultists, you heard shouts of “Fire!” and spotted smoke billowing just a few lanes over in [[Riverdale]]. There was no time to investigate, but you knew [[The Cleaner]] and his crew were also on the heels of [[The Needle]]...and the [[Friends of the Library]] too!
 * The [[Old Bridge Stream Mill]] is located right next to a ruined bridge over the [[Negu]]. It’s downriver of ancient [[Eguzki]] and was once part of the nearby hinterland. It’s now a bit too far upstream of [[Riverdale]] to be convenient, and has fallen into decay. You’ve seen it hundreds of times from the river or the road but never given it much thought. (Setting note: Eguzki was destroyed centuries ago by an earthquake, which also shifted the course of the Negu River. There are several other ruined bridges - and a still intact one that is something of a tourist attraction - spanning the old rivercourse in the midst of the ancient ruins.)
 * As you approached the mill building, you could hear the chants of The Needle’s summoning ritual coming from inside, and the muffled screams of their sacrificial victim!
@@ -13332,7 +13377,7 @@ What will you do now? Evade the hunt? Go on the hunt yourselves? And what of the
 So you find yourselves in control of the abandoned mill, with several terrified Norgorberite initiates, one burned and bitten yet surprisingly still hungry young gnome, and zero horrible demons called forth from the Abyss. The Needle is nowhere to be seen, having abandoned his flock (and some of his stuff). You know the Cleaner is out there somewhere looking for him, and for you. What will you do next?
 </pre>
 </div>
-<div created="20201230205334436" modified="20211104011048183" tags="recap [[2.2) There Was No Clean Like Mister Clean]]" title="Session 2020-12-26 (#15): Cleaned Up">
+<div created="20201230205334436" modified="20211107011835452" sketch="[[The Cleaner]] showed up and in turn crashed your party-crashing!" tags="recap [[Ch. 2.2 - No Clean Like Mister Clean]]" title="Session 2020-12-26 (#15): Cleaned Up">
 <pre>!Summary:
 
 * [[The Needle]] escaped by turning himself invisible, but he left [[an interesting book|Norgorberite Ledger and Codex]] behind...
@@ -13362,7 +13407,7 @@ So you find yourselves in control of the abandoned mill, with several terrified 
 Your run in with The Cleaner almost proved deadly; luckily he had too many targets to kill and chose the cultists first. You’re safe for now, and the experience plus a night’s rest will give you new skills and strengths...
 </pre>
 </div>
-<div created="20210110061435779" modified="20211104011845751" sketch="You bested [[The Cleaner]] in the streets of [[Riverdale]]! But [[The Lady Iztal Mehea|Iztal Mehea]] is smearing your good name..." tags="recap [[2.2) There Was No Clean Like Mister Clean]]" title="Session 2021-01-08 (#16): Scrub Behind the Nose">
+<div created="20210110061435779" modified="20211107011835452" sketch="You bested [[The Cleaner]] in the streets of [[Riverdale]]! But [[The Lady Iztal Mehea|Iztal Mehea]] is out there smearing your good name..." tags="recap [[Ch. 2.2 - No Clean Like Mister Clean]]" title="Session 2021-01-08 (#16): Scrub Behind the Nose">
 <pre>!Summary:
 
 * [[You|Friends of the Library]] learned that the Viceregal governor's delegate in the Valley was considering sending for imperial troops, something that would worry any Valley natives, and especially worries you and your friends at the [[Rock|Three Suns Rock]]
@@ -13392,7 +13437,7 @@ Your run in with The Cleaner almost proved deadly; luckily he had too many targe
 * The [[Viceregal governor's delegate in the Valley|Serdar Meran]] is confused and doesn't know what to think. Twenty citizens saw you best The Cleaner, and it's obvious in retrospect that The Cleaner and his henchmen were responsible for the fires and much of violence, but you hear that his cautious nature makes him inclined to send for reinforcements anyway...
 * After a while, [[Jonathan]] finally found you! Man, he waited at the [[Justice League]] clubhouse for, like, a couple of hours, and you never showed up? WTF?</pre>
 </div>
-<div created="20210124042946689" modified="20211104011030001" tags="recap" title="Session 2021-01-22 (#17): Furious Feast">
+<div created="20210124042946689" modified="20211106221019615" sketch="In order to save the [[Sun Valley Import Export]] minions you rescued, you made a deal with local recreational substance kingpin [[Little Andy]] to transport his next shipment in exchange for a connection to the &quot;weirdos&quot; who deal in [[soul drugs|soul narcotic]]. You travelled up the [[Negu]] to meet Little Andy's field partner [[Hatchet]] at his base in the [[Toppled Church]] of [[Sarenrae]] at [[Usol Dam]], but found he had been taken in an apparent orc-raid! So you began your pursuit..." tags="recap [[Chapter TBD]]" title="Session 2021-01-22 (#17): Furious Feast">
 <pre>!Summary
 
 * [[Prior Izarra|Lagabad Izarra]] found you not long after the [[you defeated The Cleaner|Session 2021-01-08 (#16): Scrub Behind the Nose]] with some news about the [[Sun Valley Import Export]] minions you [[rescued/captured|Session 2020-11-28 (#12): Flies on the Wall]] from the Sun Valley facility. Although they said they had sold their souls to the company, it turns out that really they are &quot;merely&quot; afflicted by an addiction to a special kind of &quot;[[soul narcotic]]&quot;. But the sudden withdrawal could result in the loss of their souls anyway! They need at least one more dose to wean themselves off safely.
@@ -13418,7 +13463,7 @@ Your run in with The Cleaner almost proved deadly; luckily he had too many targe
 * Mike cast a spell that rendered three of the orcs unable to take hostile action unless they were themselves attacked. Squeeky convinced one of those to be helpful and go get the drug stash. Santo blinded two orcs and dazzled their chief. Mike magically messaged the captive Hatchet and told him to remain calm, and Hatchet got the message, replying that he was tied up near the stash. You clearly had the upper hand!
  </pre>
 </div>
-<div created="20210222045500129" modified="20211104011012887" tags="recap" title="Session 2021-02-20 (#18): Jaw Jaw not War War">
+<div created="20210222045500129" modified="20211107010815465" sketch="You rescued [[Hatchet]] from the [[Orcs of the Bear's Hide]], and discovered the orcs were acting as mercenaries, working for &quot;the man making all the maps&quot;. A seemingly-grateful Hatchet told you where you could find the &quot;weirdos&quot;, although he tried to discourage you from going to find them. There, deep in the [[Cascades of Usol]], you met a pod of leshys led by [[Roots in Flowing Water]]. They were preparing an ambush, saying that Hatchet and the &quot;weirdos&quot; regularly did business together...Hatchet brings slaves to trade for soul drugs made from the bodies of the leshys themselves!" tags="recap [[Chapter TBD]]" title="Session 2021-02-20 (#18): Jaw Jaw not War War">
 <pre>!Summary
 
 * You rescued [[Hatchet]] and recovered his drug stash unharmed!
@@ -13443,7 +13488,7 @@ Your run in with The Cleaner almost proved deadly; luckily he had too many targe
 * Roots in Flowing Water told you that it's the deep gnomes who &quot;harvest&quot; their people and have been dealing with Hatchet. But the  svirfneblin work for someone called &quot;Bozzle&quot;. Roots began to tell you more as [[Mike]] grappled across the quicksand to hammer on the &quot;doorbell&quot;... 
 </pre>
 </div>
-<div created="20210228040439653" modified="20211104011019152" tags="recap" title="Session 2021-02-26 (#19): Flinty Svirfneblender">
+<div created="20210228040439653" modified="20211106221504655" sketch="It turns out that not only has [[Hatchet]] been dealing with the svirfneblin ([[Deep Gnomes of Usol]]) recently, but he neglected to give you his code word! The weirdos figured out you weren't there to &quot;trade with them&quot; so much as &quot;rob them&quot;, and were able to summon their reserve before the fight began. But it was to no avail - you got in a few tight spots, but ultimately wiped them out and took their soul drugs, even as they tried to snatch [[Roots in Flowing Water]] and retreat" tags="recap [[Chapter TBD]]" title="Session 2021-02-26 (#19): Flinty Svirfneblender">
 <pre>!Summary
 
 * It turns out that not only has [[Hatchet]] been dealing with the svirfneblin ([[Deep Gnomes of Usol]]) recently, but he neglected to give you his code word.
@@ -13499,10 +13544,8 @@ This grotesque, amulet-like shrunken head is said to contain the enslaved soul o
 * Effect You specify a trigger (described on Core Rulebook p. 305) and a message up to 25 words long. When the specified trigger occurs within 5 feet of soulspeaker, the head speaks the message.  While it carries a message, the eyes of the stitched head stretch open, closing as soon as its message has been delivered.  Activating the soulspeaker while it still contains a message erases the old message.
 </pre>
 </div>
-<div created="20201230210211236" modified="20210118061729582" tags="pc" title="Squeeky">
-<pre>* Half-orc Druid of [[Sarenrae]]
-* Animal companion is [[Pterrence]]
-</pre>
+<div created="20201230210211236" modified="20211107031250660" sketch="Half-orc Druid of [[Sarenrae]], with pteranodon companion [[Pterrence]]" tags="pc" title="Squeeky">
+<pre></pre>
 </div>
 <div created="20201231043353668" modified="20201231043353668" title="St. Bryla">
 <pre></pre>
